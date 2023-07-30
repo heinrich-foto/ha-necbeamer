@@ -1,0 +1,14 @@
+{
+  "domain": "necbeamer",
+  "name": "NEC Beamer LAN",
+  "codeowners": ["@heinrich-foto"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/necbeamer",
+  "homekit": {},
+  "integration_type": "helper",
+  "iot_class": "local_polling",
+  "requirements": ["async_nec_beamer"],
+  "ssdp": [],
+  "zeroconf": []
+}
