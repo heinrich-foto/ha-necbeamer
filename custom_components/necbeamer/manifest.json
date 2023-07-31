@@ -8,7 +8,7 @@
   "homekit": {},
   "integration_type": "helper",
   "iot_class": "local_polling",
-  "requirements": ["async_nec_beamer"],
+  "requirements": ["async_nec_beamer==0.1.4"],
   "ssdp": [],
   "zeroconf": [],
   "version": "0.1.4"
