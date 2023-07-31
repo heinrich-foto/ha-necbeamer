@@ -6,10 +6,10 @@
   "dependencies": [],
   "documentation": "https://github.com/heinrich-foto/ha-necbeamer",
   "homekit": {},
-  "integration_type": "helper",
+  "integration_type": "hub",
   "iot_class": "local_polling",
   "requirements": ["async_nec_beamer==0.1.4"],
   "ssdp": [],
   "zeroconf": [],
-  "version": "0.1.4"
+  "version": "0.1.5"
 }

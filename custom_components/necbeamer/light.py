@@ -57,6 +57,11 @@ class NecBeamerLight(LightEntity):
         self._name = light["name"]
         self._state = None
         self._brightness = 255
+        self._icons = {
+            "off": "mdi:projector",
+            "on": "mdi:projector-screen",
+            "unavailable": "mdi:projector-off"
+        }
 
     @property
     def name(self) -> str:
@@ -81,6 +86,16 @@ class NecBeamerLight(LightEntity):
         """Return true if light is on."""
         self._state = self._light.is_on
         return self._state
+
+    @property
+    def icon(self):
+        """Return the icon to use in the frontend, if any."""
+        if not self._light.is_available:
+            return self._icons["unavailable"]
+        if self._light.is_on:
+            return self._icons["on"]
+        else:
+            return self._icons["off"]
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         """Instruct the light to turn on."""
